@@ -54,6 +54,56 @@ def encode():
 
     print("Your password has been encoded and stored!")
 
+def decode():
+    decoded_product = []
+    for character in encoded_password:
+        if character == "0":
+            decoded_product.append(0)
+        elif character == "1":
+            decoded_product.append(1)
+        elif character == "2":
+            decoded_product.append(2)
+        elif character == "3":
+            decoded_product.append(3)
+        elif character == "4":
+            decoded_product.append(4)
+        elif character == "5":
+            decoded_product.append(5)
+        elif character == "6":
+            decoded_product.append(6)
+        elif character == "7":
+            decoded_product.append(7)
+        elif character == "8":
+            decoded_product.append(8)
+        elif character == "9":
+            decoded_product.append(9)
+
+        for i in range(len(decoded_product)):
+            if decoded_product[i] == 0:
+                decoded_product[i] = "7"
+            elif decoded_product[i] == 1:
+                decoded_product[i] = "8"
+            elif decoded_product[i] == 2:
+                decoded_product[i] = "9"
+            elif decoded_product[i] == 3:
+                decoded_product[i] = "0"
+            elif decoded_product[i] == 4:
+                decoded_product[i] = "1"
+            elif decoded_product[i] == 5:
+                decoded_product[i] = "2"
+            elif decoded_product[i] == 6:
+                decoded_product[i] = "3"
+            elif decoded_product[i] == 7:
+                decoded_product[i] = "4"
+            elif decoded_product[i] == 8:
+                decoded_product[i] = "5"
+            elif decoded_product[i] == 9:
+                decoded_product[i] = "6"
+    gap = ""
+    decoded_password = gap.join(decoded_product)
+
+    print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
+
 while True:
     print("\n")
     print("Menu")
@@ -69,3 +119,4 @@ while True:
         encode()
     elif option == 2:
         decode()
+
